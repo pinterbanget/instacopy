@@ -75,7 +75,6 @@ class InstagramBot:
 if __name__ == '__main__':
     with open('data.txt', 'r') as file:
         data = file.readlines()
-        print(data)
 
     USERNAME = data[0].split(': ')[1]
     PASSWORD = data[1].split(': ')[1]
