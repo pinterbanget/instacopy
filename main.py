@@ -6,8 +6,8 @@ import random
 
 
 class InstagramBot:
-    def __init__(self, username, password):
-        self.driver = webdriver.Edge(executable_path='C:\msedgedriver.exe')
+    def __init__(self, username, password, driver_path):
+        self.driver = webdriver.Chrome(executable_path=driver_path)
         self.followers_list = []
         self.driver.get('https://www.instagram.com/accounts/login/')
         time.sleep(5)
@@ -80,7 +80,8 @@ if __name__ == '__main__':
     USERNAME = data[0].split(': ')[1]
     PASSWORD = data[1].split(': ')[1]
     TO_COPY = data[2].split(': ')[1]
+    DRIVER_PATH = data[3].split(': ')[1]
 
-    insta_bot = InstagramBot(username=USERNAME, password=PASSWORD)
+    insta_bot = InstagramBot(username=USERNAME, password=PASSWORD, driver_path=DRIVER_PATH)
     insta_bot.get_followers_list(account=TO_COPY)
     insta_bot.follow_everyone()
