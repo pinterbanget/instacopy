@@ -1,3 +1,4 @@
 username: #fill with your username
 password: #fill with your password
 account to copy: #fill with the account you want to copy his following list brother
+chrome driver directory: #download here first if you haven't already brother https://chromedriver.chromium.org/downloads
